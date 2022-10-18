@@ -8,7 +8,12 @@ class niubi():
         while True:
             t = jianting().main()
             res = base64.b64decode(t)
-            print(res)
+            res = str(res)
+            i = 1
+            for ch in res:
+                if ch.isalpha():
+                    print(str(i) + ':' + ch)
+                    i = i + 1
 
 
 class jianting():
